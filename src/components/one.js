@@ -1,4 +1,4 @@
-import React,{Component} from "react"
+import React from "react"
 
 import "./one.css"
 import {BrowserRouter as Router,Switch,Link,Route} from "react-router-dom"
@@ -11,18 +11,11 @@ export class  Test extends React.Component{
             count:0
         };
     }
-    shot(){
-        this.setState((prev,props)=>({
-            count:prev.count+1
-        }));
-    }
     render(){
         return (
             <div>
                 <center>My name is : {this.state.name}</center>
                 <center>My age is: {this.state.age}</center>
-                
-                <button onClick={this.shot}>Shot</button>
             </div>
         );
     }
